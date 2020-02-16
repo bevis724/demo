@@ -11,34 +11,34 @@ $color-heavy-over: #FF1200
 
 =rwd1680
   media (max-width: 1680px)
-    @content
+  @content
 =rwd1440
   media (max-width: 1440px)
-    @content
+  @content
 =rwd1366
   media (max-width: 1366px)
-    @content
+  @content
 =rwd1280
   media (max-width: 1280px)
-    @content
+  @content
 =rwd1024
   media (max-width: 1024px)
-    @content
+  @content
 =rwd768
   media (max-width: 768px)
-    @content
+  @content
 =rwd640
   media (max-width: 640px)
-    @content
+  @content
 =rwd480
   media (max-width: 480px)
-    @content
+  @content
 =rwd425
   media (max-width: 425px)
-    @content
+  @content
 =rwd375
   media (max-width: 375px)
-    @content
+  @content
 
 
 
@@ -337,7 +337,10 @@ body
     display: block
     line-height: 50px
     margin: 0 auto
+    position: relative
     text-align: center
+    &:active
+      top: 1px
 .footer
   height: 90px
   align-items: center
