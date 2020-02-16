@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, user-scalable=yes">
+  <link rel="stylesheet" href="./dist/css/reset.min.css">
+  <link rel="stylesheet" href="./dist/css/bmi.min.css">
+  <title>BMI</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__logo">
+          <img src="./dist/images/BMICLogo.png" alt="BMICLogo">
+        </div>
+        <div class="header__input">
+          <div class="input__row">
+            <label class="input__title" for="height">身高 cm</label>
+            <input type="text" id="height" name="height" class="input__text input__text--height" placeholder="請輸入身高">
+          </div>
+          <div class="input__row">
+            <label class="input__title" for="weight">體重 kg</label>
+            <input type="text" id="weight" name="weight" class="input__text input__text--weight" placeholder="請輸入體重">
+          </div>
+        </div>
+        <div class="header__btn">
+          <a class="btn__text">
+            <span class="btn__text--result">看結果</span>
+          </a>
+          <span class="state__text"></span>
+        </div>
+    </header>
+    <main class="main">
+      <section class="record">
+        <p class="record__title">BMI 紀錄</p>
+        <ul class="record__list">
+        </ul>
+        <a class="record__history" href="javascript:;">清除歷史資料</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo"><img src="./dist/images/BMICLogobtm.png" alt=""></div>
+    </footer>
+  </div>
+  <script src="./dist/js/bmi.js"></script>
+</body>
+
+</html>
