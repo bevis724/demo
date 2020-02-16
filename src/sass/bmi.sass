@@ -1,0 +1,351 @@
+// variables
+$color-primary: #ffd366
+$color-seond: #424242
+$color-record-text: #4A4A4A
+$color-ideal: #86D73F
+$color-light: #31BAF9
+$color-heavy: #FF982D
+$color-heavy-slightly: #FF6C02
+$color-heavy-medium: #FF6C02
+$color-heavy-over: #FF1200
+
+=rwd1680
+  media (max-width: 1680px)
+    @content
+=rwd1440
+  media (max-width: 1440px)
+    @content
+=rwd1366
+  media (max-width: 1366px)
+    @content
+=rwd1280
+  media (max-width: 1280px)
+    @content
+=rwd1024
+  media (max-width: 1024px)
+    @content
+=rwd768
+  media (max-width: 768px)
+    @content
+=rwd640
+  media (max-width: 640px)
+    @content
+=rwd480
+  media (max-width: 480px)
+    @content
+=rwd425
+  media (max-width: 425px)
+    @content
+=rwd375
+  media (max-width: 375px)
+    @content
+
+
+
+// extend
+%bxsz
+  box-sizing: border-box
+
+%wrap
+  width: 100%
+  margin: 0 auto
+
+%flex
+  display: flex
+  flex-wrap: wrap
+
+
+body
+  font-family: PingFangTC-Regular, SFNSDisplay, AppleSystemUIFont, sans-serif
+.header
+  background-color: $color-seond
+  padding: 74px 0 73px
+  @extend %bxsz
+  &__wrap
+    align-items: center
+    max-width: 1024px
+    justify-content: center
+    @extend %bxsz, %wrap, %flex
+  &__btn
+    align-items: center
+    justify-content: center
+    @extend %flex
+    .btn__text
+      width: 120px
+      height: 120px
+      align-items: center
+      border-radius: 50%
+      box-shadow: 0 0 1px transparent
+      background-color: $color-primary
+      cursor: pointer
+      flex-direction: column
+      justify-content: center
+      margin-right: 18px
+      position: relative
+      text-align: center
+      transform: perspective(1px) translateZ(0)
+      transition-duration: 0.3s
+      transition-property: box-shadow, transform
+      @extend %flex
+      &:hover
+        box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64)
+        transform: scale(1.05)
+      &:active
+        // background: #DEA921
+        box-shadow: none
+        top: 1px
+      .btn__text--result
+        color: $color-seond
+        font-size: 24px
+        line-height: 24px
+      .btn__text--str
+        font-size: 14px
+        line-height: 14px
+        margin-top: 4px
+      .btn__text--img
+        width: 30px
+        height: 30px
+        align-items: center
+        border-radius: 50%
+        border-style: solid 
+        border-width: 3px
+        border-color: transparent
+        background: url('../images/icons_loop.png') no-repeat center
+        background-size: 14px 19px
+        cursor: pointer
+        display: inlne-block
+        justify-content: center
+        position: absolute
+        bottom: 0px
+        right: 0px
+        transition: transform 0.25s ease-in-out
+        &:hover
+          transform: rotate(360deg)
+        &:active
+          bottom: 1px
+    .state__text
+      font-size: 32px
+      opacity: 0
+      transition: opacity 0.25s ease-in-out
+    &--ideal
+      .btn__text
+        border: 6px solid $color-ideal
+        background-color: transparent
+        .btn__text--result
+          color: $color-ideal
+        .btn__text--str
+          color: $color-ideal
+        .btn__text--img
+          border-color: $color-seond
+          background-color: $color-ideal
+          @extend %flex
+      .state__text
+        color: $color-ideal
+        opacity: 1
+    &--light
+      .btn__text
+        border: 6px solid $color-light
+        background-color: transparent
+        .btn__text--result
+          color: $color-light
+        .btn__text--str
+          color: $color-light
+        .btn__text--img
+          border-color: $color-seond
+          background-color: $color-light
+          @extend %flex
+      .state__text
+        color: $color-light
+        opacity: 1
+    &--heavy
+      .btn__text
+        border: 6px solid $color-heavy
+        background-color: transparent
+        .btn__text--result
+          color: $color-heavy
+        .btn__text--str
+          color: $color-heavy
+        .btn__text--img
+          border-color: $color-seond
+          background-color: $color-heavy
+          @extend %flex
+      .state__text
+        color: $color-heavy
+        opacity: 1
+    &--heavy-slightly
+      .btn__text
+        border: 6px solid $color-heavy-slightly
+        .btn__text--result
+          background-color: transparent
+          color: $color-heavy-slightly
+        .btn__text--str
+          color: $color-heavy-slightly
+        .btn__text--img
+          border-color: $color-seond
+          background-color: $color-heavy-slightly
+          @extend %flex
+      .state__text
+        color: $color-heavy-slightly
+        opacity: 1
+    &--heavy-medium
+      .btn__text
+        border: 6px solid $color-heavy-medium
+        background-color: transparent
+        .btn__text--result
+          color: $color-heavy-medium
+        .btn__text--str
+          color: $color-heavy-medium
+        .btn__text--img
+          border-color: $color-seond
+          background-color: $color-heavy-medium
+          @extend %flex
+      .state__text
+        color: $color-heavy-medium
+        opacity: 1
+    &--heavy-over
+      .btn__text
+        border: 6px solid $color-heavy-over
+        background-color: transparent
+        .btn__text--result
+          color: $color-heavy-over
+        .btn__text--str
+          color: $color-heavy-over
+        .btn__text--img
+          border-color: $color-seond
+          background-color: $color-heavy-over
+          @extend %flex
+      .state__text
+        color: $color-heavy-over
+        opacity: 1
+  &__input
+    margin: -18px 53px 0 97px
+    .input__row
+      display: flex
+      flex-wrap: wrap
+      flex-direction: column
+      &:first-child
+        margin-bottom: 23px
+    .input__title
+      color: $color-primary
+      font-size: 18px
+      line-height: 18px
+      margin-bottom: 7px
+    .input__text
+      width: 250px
+      border-radius: 10px
+      background-color: rgba(255,255,255,0.18)
+      border: 2px solid $color-primary
+      color: #fff
+      font-size: 24px
+      line-height: 24px
+      padding: 8px 0 8px 16px
+      @extend %bxsz
+      &::placeholder
+        color: rgba(255,255,255,0.5)
+        font-size: 24px
+        line-height: 24px
+.main
+  // min-height: 597px
+  background-color: #f5f5f5
+  @extend %bxsz
+.record
+  padding: 48px 0
+  &__title
+    color: $color-seond
+    font-size: 24px
+    line-height: 24px
+    text-align: center
+  &__list
+    max-width: 624px
+    padding: 36px 0 22px
+    @extend %wrap
+  &__item
+    height: 62px
+    background-color: #fff
+    margin-bottom: 16px
+    padding: 0 11px 0 19px
+    position: relative
+    @extend %flex
+    &::before
+      content: ''
+      width: 7px
+      height: 62px
+      position: absolute
+      top: 0
+      left: 0
+    &--ideal
+      &::before
+        background-color: $color-ideal
+        
+    &--light
+      &::before
+        background-color: $color-light
+        
+    &--heavy
+      &::before
+        background-color: $color-heavy
+        
+    &--heavy-slightly
+      &::before
+        background-color: $color-heavy-slightly
+        box-shadow: 2px 0 3px 0 rgba(255,108,2,0.29)
+    &--heavy-medium
+      &::before
+        background-color: $color-heavy-medium
+        box-shadow: 2px 0 3px 0 rgba(255,108,2,0.29)
+    &--heavy-over
+      &::before
+        background-color: $color-heavy-over
+        box-shadow: 2px 0 3px 0 rgba(255,17,0,0.29)
+    .item__text
+      align-items: center
+      color: $color-seond
+      font-size: 12px
+      line-height: 62px
+      justify-content: center
+      @extend %flex
+      span
+        &:first-child
+          margin-right: 7px
+      &:nth-child(1)
+        margin-right: 30px
+        span
+          &:first-child
+            width: 80px
+            margin-right: 0
+            text-align: left
+      &:nth-child(2)
+        margin-right: 42px
+      &:nth-child(3)
+        margin-right: 42px
+      &:nth-child(4)
+        margin-right: 50px
+      &:nth-child(5)
+        span
+          &:first-child
+            margin-right: 0
+      .text__state, .text__number
+        color: $color-record-text
+        font-size: 20px
+        line-height: 62px
+  &__history
+    width: 150px
+    height: 50px
+    border: 2px solid $color-seond
+    border-radius: 5px
+    color: $color-seond
+    display: block
+    line-height: 50px
+    margin: 0 auto
+    text-align: center
+.footer
+  height: 90px
+  align-items: center
+  background-color: $color-primary
+  justify-content: center
+  @extend %flex
+  &__logo
+    width: 55px
+    height: 55px
+    img
+      width: 100%
