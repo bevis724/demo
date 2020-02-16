@@ -1,0 +1,372 @@
+.header__title, .header__tab, .header__tab .tab__list, .spot__item .item__covertxt, .spot__item .item__info {
+  box-sizing: border-box;
+}
+
+.header__tab .tab__list, .spot__box, .spot__item .item__covertxt, .spot__page {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.spot__item .item__info .info__item::before, .spot__item .item__charge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+body {
+  font-family: SFNSDisplay, SFNSText, AppleSystemUIFont, PingFangTC-Regular, sans-serif;
+}
+
+.header {
+  font-family: PingFangTC-Regular;
+}
+
+.header__bg {
+  height: 380px;
+  background: url("../images/the-urban-landscape-1698285.png") no-repeat;
+  background-size: cover;
+  background-position: 0 center;
+  position: relative;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: 3.89px;
+  padding: 89px 0 96px 0;
+  text-align: center;
+}
+
+.header__select {
+  max-width: 452px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header__select .select {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  font-family: SFNSText;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 42px;
+  padding: 0 9.5px;
+  position: relative;
+}
+
+.header__select .select__tri {
+  width: 16px;
+  height: 11px;
+  background: url("../images/icons_down.png") no-repeat center;
+  background-size: 16px 11px;
+  position: absolute;
+  top: 20px;
+  right: 11px;
+}
+
+.header__tab {
+  max-width: 800px;
+  width: 100%;
+  height: 112px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px 26px 18px 26px;
+  position: relative;
+  bottom: -84px;
+}
+
+.header__tab .tab__title {
+  font-family: AppleSystemUIFont;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.header__tab .tab__list {
+  padding: 14px 25px 0;
+}
+
+.header__tab .tab__item {
+  width: 130px;
+  height: 42px;
+  color: #fff;
+  font-family: PingFangTC-Regular;
+  font-size: 20px;
+  line-height: 42px;
+  margin-right: 23px;
+}
+
+.header__tab .tab__item:last-child {
+  margin-right: 0;
+}
+
+.header__tab .tab__btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.header__tab .tab__btn:hover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header__tab .tab__btn:active {
+  box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  top: 1px;
+  left: 1px;
+}
+
+.header__tab .tab__btn--purple {
+  background-color: #8A82CC;
+}
+
+.header__tab .tab__btn--pink {
+  background-color: #FFA782;
+}
+
+.header__tab .tab__btn--yellow {
+  background-color: #F5D005;
+}
+
+.header__tab .tab__btn--blue {
+  background-color: #559AC8;
+}
+
+.main {
+  padding: 133px 40px 40px;
+}
+
+.main .decoration {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.main .decoration__wrap {
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  position: absolute;
+  top: -12px;
+  left: calc(50% - 14px);
+  z-index: 2;
+}
+
+.main .decoration__img {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 2px solid #559AC8;
+  border-radius: 50%;
+  background: url("../images/icons_down.png") no-repeat center;
+  background-size: 60%;
+  -webkit-filter: drop-shadow(30px 0 #559AC8);
+          filter: drop-shadow(30px 0 #559AC8);
+  position: absolute;
+  left: -30px;
+}
+
+.spot {
+  width: 100%;
+  max-width: 944px;
+  margin: 0 auto;
+  padding: 65px 0 0;
+}
+
+.spot__title {
+  font-family: SFNSDisplay;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  color: #8A82CC;
+  text-align: center;
+}
+
+.spot__box {
+  padding: 24px 0 13px;
+}
+
+.spot__item {
+  width: calc(100%/2 - 8px);
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 16px 36px 0;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.spot__item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.spot__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.spot__item .item__img {
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+  position: relative;
+}
+
+.spot__item .item__img img {
+  width: 100%;
+}
+
+.spot__item .item__covertxt {
+  width: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #fff;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 14px 24px 14px 22px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.spot__item .item__title {
+  font-family: SFNSDisplay;
+  font-size: 24px;
+  color: #FFF;
+}
+
+.spot__item .item__district {
+  font-family: PingFangTC-Regular;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.spot__item .item__info {
+  padding: 16px 50px;
+  position: relative;
+}
+
+.spot__item .item__info .info__item {
+  font-family: AppleSystemUIFont;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.spot__item .item__info .info__item--time::before {
+  width: 18px;
+  height: 18px;
+  background: url("../images/icons_clock.png") no-repeat center;
+  background-size: 18px;
+  left: -28px;
+}
+
+.spot__item .item__info .info__item--address::before {
+  width: 16px;
+  height: 20px;
+  background: url("../images/icons_pin.png") no-repeat center;
+  background-size: 16px 20px;
+  left: -26px;
+}
+
+.spot__item .item__info .info__item--phone::before {
+  width: 12px;
+  height: 20px;
+  background: url("../images/icons_phone.png") no-repeat center;
+  background-size: 12px 20px;
+  left: -22px;
+}
+
+.spot__item .item__charge {
+  font-family: PingFangTC-Regular;
+  position: absolute;
+  bottom: 19px;
+  right: 24px;
+}
+
+.spot__item .item__charge::before {
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons_tag.png") no-repeat center;
+  background-size: 20px;
+  left: -28px;
+}
+
+.spot__coverlink {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spot__page {
+  width: 100%;
+  max-width: 288px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 0 auto;
+}
+
+.spot__page .page__item {
+  color: #4a4a4a;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+.spot__page .page__item:hover {
+  color: rgba(74, 74, 74, 0.5);
+}
+
+.spot__page .page__item:active, .spot__page .page__item--current {
+  color: #559AC8;
+  font-size: 14px;
+}
+
+.footer {
+  background-color: #559AC8;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.footer__name {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer__source {
+  color: #ffd366;
+}
+/*# sourceMappingURL=travel.css.map */

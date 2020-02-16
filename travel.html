@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, user-scalable=yes">
+  <link rel="stylesheet" href="./dist/css/reset.min.css">
+  <link rel="stylesheet" href="./dist/css/travel.min.css">
+  <title>Travel</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header__bg">
+        <h1 class="header__title">高雄旅遊資訊</h1>
+        <div class="header__select">
+          <select class="select" name="" id="">
+            <option value="">- - 請選擇行政區 - -</option>
+            <option value="苓雅區">苓雅區</option>
+            <option value="三民區">三民區</option>
+            <option value="新興區">新興區</option>
+            <option value="鹽埕區">鹽埕區</option>
+          </select>
+          <span class="select__tri"></span>
+        </div>
+        <div class="header__tab">
+          <p class="tab__title">熱門行政區</p>
+          <ul class="tab__list">
+            <li class="tab__item"><a class="tab__btn tab__btn--purple" href="javascript:;">苓雅區</a></li>
+            <li class="tab__item"><a class="tab__btn tab__btn--pink" href="javascript:;">三民區</a></li>
+            <li class="tab__item"><a class="tab__btn tab__btn--yellow" href="javascript:;">新興區</a></li>
+            <li class="tab__item"><a class="tab__btn tab__btn--blue" href="javascript:;">鹽埕區</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="decoration">
+        <div class="decoration__wrap">
+          <span class="decoration__img"></span>
+        </div>
+      </div>
+      <section class="spot">
+        <h3 class="spot__title"></h3>
+        <div class="spot__box"></div>
+        <!-- <ul class="spot__page">
+          <li><a href="javascript:;" class="page__item">< prev</a></li>
+          <li><a href="javascript:;" class="page__item--current">1</a></li>
+          <li><a href="javascript:;" class="page__item">2</a></li>
+          <li><a href="javascript:;" class="page__item">3</a></li>
+          <li><a href="javascript:;" class="page__item">4</a></li>
+          <li><a href="javascript:;" class="page__item">5</a></li>
+          <li><a href="javascript:;" class="page__item">next ></a></li>
+        </ul> -->
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__name">高雄旅遊網</p>
+      <p class="footer__source">資料來源：高雄市政府</p>
+    </footer>
+  </div>
+  <script src="./dist/js/travel.js"></script>
+</body>
+
+</html>
