@@ -21,6 +21,7 @@ function addList(e) {
 	listData.push(listContent);
 	localStorage.setItem('localData', JSON.stringify(listData));
 	updateList(listData);
+	document.querySelector('.todolist__input').value = '';
 }
 
 function removeList(e) {
